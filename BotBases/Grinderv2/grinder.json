@@ -1,0 +1,18 @@
+{
+  "Settings": {
+    "CorpseLoot": true,
+    "CorpseSkin": false,
+    "DrinkAt": 50,
+    "EatAt": 50,
+    "FreeSlotsToVendor": 0,
+    "Harvest": false,
+    "KeepBlues": true,
+    "KeepGreens": true,
+    "KeepPurples": true,
+    "NinjaSkin": false,
+    "PulseRate": 100,
+    "Vendor": false,
+    "ProtectedItems": [],
+    "Creatures": []
+  }
+}

@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.3.2.1\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.3.2.1\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C56D181C-51E7-44CA-898A-4DCAD8D66AB0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ZzukBot</RootNamespace>
+    <AssemblyName>ZzukBot</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <AllowedReferenceRelatedFileExtensions>
+      .none
+    </AllowedReferenceRelatedFileExtensions>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\Internal\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\Release\Internal\ZzukBot.xml</DocumentationFile>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\Internal\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\Release\Internal\ZzukBot.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Costura, Version=3.2.1.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.3.2.1\lib\net40\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="Fasm.NET, Version=1.0.5697.28632, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Core\Resources\Fasm.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentBehaviourTree, Version=0.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentBehaviourTree.0.0.4.0\lib\net35\FluentBehaviourTree.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq, Version=3.1.0.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\morelinq.3.1.0\lib\net451\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D9.4.2.0\lib\net45\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Mathematics.4.2.0\lib\net45\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TreeTaskCore, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TreeTaskCore.1.0.6\lib\net45\TreeTaskCore.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Core\Authentication\SslAuthClientAsync.cs" />
+    <Compile Include="Core\Authentication\Models\PacketModel.cs" />
+    <Compile Include="Core\Authentication\Objects\UserProfile.cs" />
+    <Compile Include="Core\Authentication\Objects\SendOvers.cs" />
+    <Compile Include="Core\Authentication\Objects\Opcodes.cs" />
+    <Compile Include="Core\Authentication\Objects\StateObject.cs" />
+    <Compile Include="Core\Authentication\SslProfileClientAsync.cs" />
+    <Compile Include="Core\Framework\Loaders\CCLoader.cs" />
+    <Compile Include="Core\Framework\Loaders\ProfileLoader.cs" />
+    <Compile Include="Core\Game\Statics\Chat.cs" />
+    <Compile Include="Core\Game\Statics\Common.cs" />
+    <Compile Include="Core\Game\Statistics.cs" />
+    <Compile Include="Core\Utilities\DependencyInjection\DependencyMap.cs" />
+    <Compile Include="Core\Utilities\Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Core\Utilities\Extensions\AuthenticationExtensions.cs" />
+    <Compile Include="Core\Utilities\Extensions\ControlBitsExtensions.cs" />
+    <Compile Include="Core\Utilities\Extensions\EnumExtensions.cs" />
+    <Compile Include="Core\Utilities\Extensions\LocationExtensions.cs" />
+    <Compile Include="Core\Utilities\Extensions\MemoryExtensions.cs" />
+    <Compile Include="Core\Utilities\Extensions\MovementFlagsExtensions.cs" />
+    <Compile Include="Core\Utilities\Extensions\SecureStringExtensions.cs" />
+    <Compile Include="Core\Utilities\Extensions\StringExtensions.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\AllocatedMemory.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\ExternalProcessReader.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\InProcessMemoryReader.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\Internals\DetourManager.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\Internals\Manager.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\Internals\PatchManager.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\MarshalCache.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\MemoryBase.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\MemoryProtectionOperation.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\MissingAttributeException.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\Native\Imports.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\Native\PeHeaderParser.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\SafeMemoryHandle.cs" />
+    <Compile Include="Core\Utilities\GreyMagic\Utilities.cs" />
+    <Compile Include="Core\Utilities\Helpers\Cryptography.cs" />
+    <Compile Include="Core\Utilities\Helpers\DebugAssist.cs" />
+    <Compile Include="Core\Utilities\Helpers\Shared.cs" />
+    <Compile Include="Core\Utilities\Helpers\Wait.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Constants\Enums.cs" />
+    <Compile Include="Core\Constants\Offsets.cs" />
+    <Compile Include="Core\Constants\PrivateEnums.cs" />
+    <Compile Include="Core\Constants\Structs.cs" />
+    <Compile Include="Core\Constants\WinImports.cs" />
+    <Compile Include="Core\Framework\BotBases.cs" />
+    <Compile Include="Core\Framework\Classes\CustomClass.cs" />
+    <Compile Include="Core\Framework\CustomClasses.cs" />
+    <Compile Include="Core\Framework\DependencyLoader.cs" />
+    <Compile Include="Core\Framework\Interfaces\IBotBase.cs" />
+    <Compile Include="Core\Framework\Interfaces\IPlugin.cs" />
+    <Compile Include="Core\Framework\Plugins.cs" />
+    <Compile Include="Core\Game\Frames\FrameObjects\GossipOption.cs" />
+    <Compile Include="Core\Game\Frames\FrameObjects\LootItem.cs" />
+    <Compile Include="Core\Game\Frames\FrameObjects\MerchantItem.cs" />
+    <Compile Include="Core\Game\Frames\FrameObjects\QuestChoiceReward.cs" />
+    <Compile Include="Core\Game\Frames\FrameObjects\QuestLogEntry.cs" />
+    <Compile Include="Core\Game\Frames\FrameObjects\QuestObjective.cs" />
+    <Compile Include="Core\Game\Frames\FrameObjects\QuestOption.cs" />
+    <Compile Include="Core\Game\Frames\FrameObjects\TaxiNode.cs" />
+    <Compile Include="Core\Game\Frames\FrameObjects\TrainerSpellItem.cs" />
+    <Compile Include="Core\Game\Frames\GossipFrame.cs" />
+    <Compile Include="Core\Game\Frames\LootFrame.cs" />
+    <Compile Include="Core\Game\Frames\MerchantFrame.cs" />
+    <Compile Include="Core\Game\Frames\QuestFrame.cs" />
+    <Compile Include="Core\Game\Frames\QuestGreetingFrame.cs" />
+    <Compile Include="Core\Game\Frames\TaxiFrame.cs" />
+    <Compile Include="Core\Game\Frames\TrainerFrame.cs" />
+    <Compile Include="Core\Game\Objects\LocalPet.cs" />
+    <Compile Include="Core\Game\Objects\LocalPlayer.cs" />
+    <Compile Include="Core\Game\Objects\Location.cs" />
+    <Compile Include="Core\Game\Objects\Rectangle.cs" />
+    <Compile Include="Core\Game\Objects\WoWGameObject.cs" />
+    <Compile Include="Core\Game\Objects\WoWItem.cs" />
+    <Compile Include="Core\Game\Objects\WoWObject.cs" />
+    <Compile Include="Core\Game\Objects\WoWUnit.cs" />
+    <Compile Include="Core\Game\Statics\DirectX.cs" />
+    <Compile Include="Core\Game\Statics\Hacks.cs" />
+    <Compile Include="Core\Game\Statics\Inventory.cs" />
+    <Compile Include="Core\Game\Statics\KeySender.cs" />
+    <Compile Include="Core\Game\Statics\Login.cs" />
+    <Compile Include="Core\Game\Statics\Lua.cs" />
+    <Compile Include="Core\Game\Statics\Navigation.cs" />
+    <Compile Include="Core\Game\Statics\ObjectManager.cs" />
+    <Compile Include="Core\Game\Statics\QuestLog.cs" />
+    <Compile Include="Core\Game\Statics\Skills.cs" />
+    <Compile Include="Core\Game\Statics\Spell.cs" />
+    <Compile Include="Core\Game\Statics\UnitInfo.cs" />
+    <Compile Include="Core\Game\Statics\WoWEventHandler.cs" />
+    <Compile Include="Core\Game\Transport\Transport.cs" />
+    <Compile Include="GUI\Utilities\Commands\CommandHandler.cs" />
+    <Compile Include="GUI\Utilities\Commands\CommandWithoutParameter.cs" />
+    <Compile Include="GUI\Utilities\Commands\CommandWithParameter.cs" />
+    <Compile Include="GUI\Utilities\Commands\Interfaces\ICommandAction.cs" />
+    <Compile Include="GUI\Utilities\Converters\BoolInverterConverter.cs" />
+    <Compile Include="GUI\Utilities\Converters\ChannelConverter.cs" />
+    <Compile Include="GUI\Utilities\Converters\CopperConverter.cs" />
+    <Compile Include="GUI\Utilities\Converters\TabSizeConverter.cs" />
+    <Compile Include="GUI\Utilities\Converters\WidthAdjustConverter.cs" />
+    <Compile Include="GUI\Utilities\Extensions\CommandExtensions.cs" />
+    <Compile Include="GUI\Utilities\Extensions\DispatcherExtensions.cs" />
+    <Compile Include="GUI\Utilities\Properties\ListBoxBehavior.cs" />
+    <Compile Include="GUI\Utilities\Properties\Result.cs" />
+    <Compile Include="GUI\Utilities\Properties\Security.cs" />
+    <Compile Include="GUI\ViewModels\Abstractions\ViewModel.cs" />
+    <Compile Include="GUI\ViewModels\AuthenticationViewModel.cs" />
+    <Compile Include="GUI\ViewModels\MainViewModel.cs" />
+    <Compile Include="GUI\ViewModels\SharedViewModel.cs" />
+    <Compile Include="GUI\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Mem\AntiWarden\HookModule32.cs" />
+    <Compile Include="Core\Mem\AntiWarden\HookWardenMemScan.cs" />
+    <Compile Include="Core\Mem\Functions.cs" />
+    <Compile Include="Core\Mem\GetEndScene.cs" />
+    <Compile Include="Core\Mem\Hack.cs" />
+    <Compile Include="Core\Mem\Hooks\CacheCallbacks.cs" />
+    <Compile Include="Core\Mem\Hooks\SignalEventHook.cs" />
+    <Compile Include="Core\Mem\Hooks\SignalEvent_0Hook.cs" />
+    <Compile Include="Core\Mem\Hooks\UnloadWorldHook.cs" />
+    <Compile Include="Core\Mem\Libs.cs" />
+    <Compile Include="Core\Mem\LoginBlock.cs" />
+    <Compile Include="Core\Mem\MainThread.cs" />
+    <Compile Include="Core\Mem\Memory.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Logs.cs" />
+    <Compile Include="Settings\Paths.cs" />
+    <Compile Include="Settings\Default.cs" />
+    <Compile Include="GUI\Views\AuthenticationView.xaml.cs">
+      <DependentUpon>AuthenticationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Resources\038.mmap" />
+    <None Include="appsettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Content Include="Resources\AntiQuery.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cleverbot.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fasm.NET.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Loader.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\favicon.ico" />
+    <None Include="Resources\beep" />
+    <None Include="Resources\FastCall.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="GUI\Utilities\Dictionaries\Commands.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Utilities\Dictionaries\Converters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Utilities\Dictionaries\LayoutResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Views\AuthenticationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.3.3.4\build\Fody.targets" Condition="Exists('..\packages\Fody.3.3.4\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.3.3.4\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.3.3.4\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.3.2.1\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.3.2.1\build\Costura.Fody.props'))" />
+  </Target>
+</Project>

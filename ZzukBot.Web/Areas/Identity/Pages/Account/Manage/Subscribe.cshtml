@@ -1,0 +1,103 @@
+﻿@page
+@model SubscribeModel
+@{
+    ViewData["Title"] = "Subscribe";
+}
+
+<h4>@ViewData["Title"]</h4>
+@await Html.PartialAsync("_StatusMessage", Model.StatusMessage)
+<div class="row text-center">
+    @*<div class="col-md-3">
+        <h5>1 Month Unlimited</h5>
+        <h5>$8 USD</h5>
+        <h6>0% Discount</h6>
+        <form action="https://bitpay.com/checkout" method="post">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="posData" value="@Model.ApplicationUser.Id" />
+            <input type="hidden" name="data" value="HCxCBvqlwFFgrCB/1hWC9haNhUT/cyePwpSU8ZVg49O6kkxXDY1LxXcvom1voDPiwrZKSlVVAjkOctg7QTyVfTr0Wy78Ua0xKILQv0sOhqhhdKf1kqeBwlQT12Fgdrjd9JphwpZNLiwC9vjKPu5v0mEp2ieODYkRhXSGrbIkjjitjci9lSclKZkN55DKJiTIwxazULsG9sCR2NbOcg+f4QNmRGdC+AK0c99Opo6Iho+bzxCtR8n/iTMZPOHVUPCjsf0MmZ2e4fqs3Jhxoi1NqXWmb+XQJoHjKGwSU9sQYYIHVEnMMWBZa7lRFJMI91n8m3PyMDUoAe6L/WXmPhfLXw==" />
+            <input type="image" src="https://bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
+        </form>
+    </div>
+    <div class="col-md-3">
+        <h5>3 Months Unlimited</h5>
+        <h5>$20 USD</h5>
+        <h6>16.7% Discount</h6>
+        <form action="https://bitpay.com/checkout" method="post">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="posData" value="@Model.ApplicationUser.Id" />
+            <input type="hidden" name="data" value="HCxCBvqlwFFgrCB/1hWC9haNhUT/cyePwpSU8ZVg49O6kkxXDY1LxXcvom1voDPixWaofN9Cdw2Mdeqss1e5HKM2Cmgc1+2s0b+5x7iuOzsOo0k+kaLgI7Ekp2nQ91tR+0n+sZidxTM3UQfwu3xLtxr6V11RlYjrksAPXuJk5xZA1LR7OBtElo2yANeeNpgFWhlMWR5sYjsnvTzXzhddgNqHileQbVZB8t2Le2FXEmvMZPsvPXERrkj30RNusxQefwsOOKWDA3nEpfiCXFVQ+imPIs+nijRLqE6lpHRMMKlma0M5bahiTtm+FX3eM1PjcntogOCZQ9VE9JNpaOy+iQ==" />
+            <input type="image" src="https://bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
+        </form>
+    </div>
+    <div class="col-md-3">
+        <h5>6 Months Unlimited</h5>
+        <h5>$36 USD</h5>
+        <h6>25% Discount</h6>
+        <form action="https://bitpay.com/checkout" method="post">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="posData" value="@Model.ApplicationUser.Id" />
+            <input type="hidden" name="data" value="HCxCBvqlwFFgrCB/1hWC9haNhUT/cyePwpSU8ZVg49O6kkxXDY1LxXcvom1voDPi2s0B7GWH0HTFO0Lglw7w+jTc6ioAQsVoN8xHX4S+PB59JWnMlvf03IFH3DILTig3hJHkbJ7V3AhwWjA1IbMzmOOtxm/jvLspckvYdulLsQkxOQ3ptlYj8Z/KqQGxVhutcvNnrf7rY4cEY9ESty2WazFhGopP7egFxMpLTUmMjBm5fVDSI0vtjUVKBSJJCJ7xoWiINUNag9PUIhn1g7jt07LaesMGF92Vs3jDIV0H57LJcsnpZYuLEoyorl5iYoCJK0FusRlgghB33nCyn26EMg==" />
+            <input type="image" src="https://bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
+        </form>
+    </div>
+    <div class="col-md-3">
+        <h5>12 Months Unlimited</h5>
+        <h5>$68 USD</h5>
+        <h6>29.2% Discount</h6>
+        <form action="https://bitpay.com/checkout" method="post">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="posData" value="@Model.ApplicationUser.Id" />
+            <input type="hidden" name="data" value="HCxCBvqlwFFgrCB/1hWC9haNhUT/cyePwpSU8ZVg49O6kkxXDY1LxXcvom1voDPiT4EFcnbl7ejpMDNO12VDboTOchYesK1Qu17mknuDOuEo88wF9FhTxG7K931zjtHc0zv11vqweQeW7DomlvB80G+qxRTP+/XwzkAP+TKunulcgRYhtVgpVCtQrNhXMz/LaV5NTHNM4fiyV/CaOyzXEWkNslEzTyTiHcxAq8U7A9guSoelah3smkavJuZgVX1eZGQepjk7rWaTGYb2+tzVWk9XBrlLKT680l580jfAwbPYgvHxy1YDlOIGJVA6FDjVAATpHt4Tnq5c7QqWAhpMSg==" />
+            <input type="image" src="https://bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
+        </form>
+    </div>*@
+</div>
+    @*
+        <div class="col-md-3">
+            <h5>1 Month Unlimited</h5>
+            <h5>$8 USD</h5>
+            <h6>0% Discount</h6>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="S3GWDHCV6PB4J">
+                <input type="hidden" name="custom" value="@Model.ApplicationUser.Id">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>
+        <div class="col-md-3">
+            <h5>3 Months Unlimited</h5>
+            <h5>$20 USD</h5>
+            <h6>16.7% Discount</h6>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="MWEY35NXFCUJ2">
+                <input type="hidden" name="custom" value="@Model.ApplicationUser.Id">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>
+        <div class="col-md-3">
+            <h5>6 Months Unlimited</h5>
+            <h5>$36 USD</h5>
+            <h6>25% Discount</h6>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="Q3D3M3LTQ9PSW">
+                <input type="hidden" name="custom" value="@Model.ApplicationUser.Id">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>
+        <div class="col-md-3">
+            <h5>12 Months Unlimited</h5>
+            <h5>$68 USD</h5>
+            <h6>29.2% Discount</h6>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="AP5GPHHSAHSMJ">
+                <input type="hidden" name="custom" value="@Model.ApplicationUser.Id">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>*@

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="6353e913-9cae-444a-8f71-50fcfb86c1ea" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>Here you will find everything in the ZzukBot assembly that is publicly accessible.</para>
+		</introduction>
+
+		<section>
+			<title>Getting Started</title>
+			<content>
+				<para>
+          This is where an explanation on how to create BotBases/Plugins/CustomClasses will be.
+        </para>
+        <para>
+          Hopefully, this content will be here soon™.
+        </para>
+
+				<list class="bullet">
+					<listItem>
+						<para>
+              
+            </para>
+					</listItem>
+
+					<listItem>
+						<para>
+              
+            </para>
+					</listItem>
+
+					<listItem>
+						<para>
+              
+            </para>
+					</listItem>
+
+					<listItem>
+						<para>
+              
+            </para>
+					</listItem>
+				</list>
+
+				<para>
+          
+        </para>
+			</content>
+		</section>
+
+		<relatedTopics>
+      
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

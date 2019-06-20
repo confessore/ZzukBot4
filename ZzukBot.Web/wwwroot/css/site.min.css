@@ -1,0 +1,27 @@
+﻿body {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    background-color: #9370db;
+    font-family: 'Sitka Text'
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.box {
+    padding: 20px;
+    background-color: #a9a9a9;
+    border: 1px solid #000
+}
+
+#qrCode {
+    margin: 15px
+}
+
+@media screen and (max-width:767px) {
+    .carousel-caption {
+        display: none
+    }
+}
