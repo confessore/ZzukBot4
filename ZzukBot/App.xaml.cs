@@ -316,12 +316,12 @@ namespace ZzukBot
                     LoginBlock.Enable();
 
                     Current.ShutdownMode = ShutdownMode.OnExplicitShutdown;
-                    $"Bringing up the login window".Log(Logs.Injected, true);
-                    var authenticationView = new AuthenticationView();
-                    authenticationView.ShowDialog();
-                    var authenticationModel = (AuthenticationViewModel)authenticationView.DataContext;
-                    if (authenticationModel.Result == null || authenticationModel.Result.Value != DialogResult.OK)
-                        Environment.Exit(0);
+                    //$"Bringing up the login window".Log(Logs.Injected, true);
+                    //var authenticationView = new AuthenticationView();
+                    //authenticationView.ShowDialog();
+                    //var authenticationModel = (AuthenticationViewModel)authenticationView.DataContext;
+                    //if (authenticationModel.Result == null || authenticationModel.Result.Value != DialogResult.OK)
+                        //Environment.Exit(0);
                     
                     $"Initialising the bot".Log(Logs.Injected, true);
                     Memory.Init();
