@@ -32,7 +32,7 @@ namespace ZzukBot.Packager
             File.Copy(Paths.SourceFisherLibrary, Paths.DestinationFisherLibrary);
             File.Copy(Paths.SourceFollowerLibrary, Paths.DestinationFollowerLibrary);
             //File.Copy(Paths.SourceGathererLibrary, Paths.DestinationGathererLibrary);
-            File.Copy(Paths.SourceGrinderLibrary, Paths.DestinationGrinderLibrary);
+            //File.Copy(Paths.SourceGrinderLibrary, Paths.DestinationGrinderLibrary);
             File.Copy(Paths.SourceGrinderv2Library, Paths.DestinationGrinderv2Library);
             //File.Copy(Paths.SourceHarvesterLibrary, Paths.DestinationHarvesterLibrary);
             File.Copy(Paths.SourceHunterLibrary, Paths.DestinationHunterLibrary);
@@ -40,8 +40,8 @@ namespace ZzukBot.Packager
             File.Copy(Paths.SourceMageLibrary, Paths.DestinationMageLibrary);
             File.Copy(Paths.SourcePaladinLibrary, Paths.DestinationPaladinLibrary);
             File.Copy(Paths.SourcePriestLibrary, Paths.DestinationPriestLibrary);
-            File.Copy(Paths.SourceProfileConverterLibrary, Paths.DestinationProfileConverterLibrary);
-            File.Copy(Paths.SourceProfileCreatorLibrary, Paths.DestinationProfileCreatorLibrary);
+            //File.Copy(Paths.SourceProfileConverterLibrary, Paths.DestinationProfileConverterLibrary);
+            //File.Copy(Paths.SourceProfileCreatorLibrary, Paths.DestinationProfileCreatorLibrary);
             File.Copy(Paths.SourceREADMEFile, Paths.DestinationREADMEFile);
             File.Copy(Paths.SourceRogueLibrary, Paths.DestinationRogueLibrary);
             File.Copy(Paths.SourceShamanLibrary, Paths.DestinationShamanLibrary);
