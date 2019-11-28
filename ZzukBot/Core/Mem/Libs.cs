@@ -20,7 +20,7 @@ namespace ZzukBot.Core.Mem
 
         private Libs()
         {
-            File.Delete(pathFastCall);
+            //File.Delete(pathFastCall);
             if (FastCallPtr == IntPtr.Zero)
             {
                 FastCallPtr = Load(pathFastCall, Resources.FastCall);
